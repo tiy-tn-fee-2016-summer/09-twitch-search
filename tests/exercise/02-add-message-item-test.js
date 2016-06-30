@@ -6,7 +6,7 @@
   }
 
   /* global require */
-  const addMessageItem = require('add-message-item');
+  const addMessageItem = require('exercise/add-message-item');
 
   QUnit.module('Add Message Item');
 
@@ -30,7 +30,8 @@
     const resultTwo = list.querySelector('li:last-of-type');
 
     // Element tag names are uppercase when looked up
-    assert.equal(resultOne.tagName, 'LI', 'createMessageItem should return an `LI` element');
+    assert.equal(resultOne.tagName, 'LI',
+      'createMessageItem should return an `LI` element');
 
     // Uses the fixWhitespace helper to remove repeating whitespace
     // so you can format your HTML better

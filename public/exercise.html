@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>08-voting-app</title>
+  <link rel="stylesheet" href="/app.css">
+</head>
+
+<body>
+  <ul class="messages">
+    <li class="message-item">
+      <span class="message-item__username">John</span>
+      <span class="message-item__message">Getting ready for the Java class!</span>
+    </li>
+  </ul>
+
+  <div class="sum-container">
+    <ul class="sum-it-up">
+      <li>16</li>
+      <li>2</li>
+      <li>96</li>
+      <li>65</li>
+      <li>93</li>
+      <li>20</li>
+      <li>83</li>
+      <li>80</li>
+      <li>16</li>
+      <li>24</li>
+    </ul>
+    <p>The sum is: <span class="sum-result">?</span></p>
+  </div>
+
+  <div class="two-lists">
+    <div class="two-lists__child">
+      <h2>Source</h2>
+
+      <ul class="card-list card-list--source">
+        <li class="card-list__item">
+          <img src="https://www.random.org/playing-cards/4.png" width="72" height="96" alt="Ace of Diamonds" title="Ace of Diamonds">
+        </li>
+        <li class="card-list__item">
+          <img src="https://www.random.org/playing-cards/26.png" width="72" height="96" alt="Eight of Spades" title="Eight of Spades">
+        </li>
+        <li class="card-list__item">
+          <img src="https://www.random.org/playing-cards/22.png" width="72" height="96" alt="Nine of Spades" title="Nine of Spades">
+        </li>
+        <li class="card-list__item">
+          <img src="https://www.random.org/playing-cards/33.png" width="72" height="96" alt="Six of Clubs" title="Six of Clubs">
+        </li>
+        <li class="card-list__item">
+          <img src="https://www.random.org/playing-cards/40.png" width="72" height="96" alt="Five of Diamonds" title="Five of Diamonds">
+        </li>
+        <li class="card-list__item">
+          <img src="https://www.random.org/playing-cards/50.png" width="72" height="96" alt="Two of Spades" title="Two of Spades">
+        </li>
+        <li class="card-list__item">
+          <img src="https://www.random.org/playing-cards/21.png" width="72" height="96" alt="Nine of Clubs" title="Nine of Clubs">
+        </li>
+        <li class="card-list__item">
+          <img src="https://www.random.org/playing-cards/18.png" width="72" height="96" alt="Ten of Spades" title="Ten of Spades">
+        </li>
+        <li class="card-list__item">
+          <img src="https://www.random.org/playing-cards/7.png" width="72" height="96" alt="King of Hearts" title="King of Hearts">
+        </li>
+        <li class="card-list__item">
+          <img src="https://www.random.org/playing-cards/52.png" width="72" height="96" alt="Two of Diamonds" title="Two of Diamonds">
+        </li>
+      </ul>
+    </div>
+
+    <div class="two-lists__child">
+      <h2>Target</h2>
+
+      <ul class="card-list card-list--target">
+      </ul>
+    </div>
+  </div>
+
+  <script src="/vendor.js" charset="utf-8"></script>
+  <script src="/app.js" charset="utf-8"></script>
+
+  <script type="text/javascript">
+    const exercise = require('exercise/index');
+
+    const messages = document.querySelector('.messages');
+    const sumContainer = document.querySelector('.sum-it-up');
+    const sumTarget = document.querySelector('.sum-result');
+    const source = document.querySelector('.card-list--source');
+    const target = document.querySelector('.card-list--target');
+
+    exercise(messages, sumContainer, sumTarget, source, target);
+  </script>
+</body>
+
+</html>

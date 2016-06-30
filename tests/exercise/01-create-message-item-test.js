@@ -6,9 +6,13 @@
   }
 
   /* global require */
-  const createMessageItem = require('create-message-item');
+  const createMessageItem = require('exercise/create-message-item');
 
   QUnit.module('Create Message Item');
+
+  test('make qunit happy', (assert) => {
+    assert.ok(true);
+  });
 
   test('it creates a new message item element', (assert) => {
     const messageOne = { username: 'Ryan', message: 'Do your homework' };
@@ -32,7 +36,7 @@
 
     assert.equal(nameOne, 'Ryan',
       'createMessageItem should create a ".message-item__username" span filled with the username for messageOne');
-    assert.equal(nameOne, 'Josh',
+    assert.equal(nameTwo, 'Josh',
       'createMessageItem should create a ".message-item__username" span filled with the username for messageTwo');
   });
 })();
