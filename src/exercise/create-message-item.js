@@ -9,6 +9,6 @@
 // The "data" argument will be an object that looks like
 // { username: 'John', message: 'Getting ready for the Java class!' },
 
-export default function (data) {
+export default function () {
 
 }

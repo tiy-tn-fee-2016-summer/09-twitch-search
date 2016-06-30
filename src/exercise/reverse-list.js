@@ -1,9 +1,9 @@
 // This function should take in two arguments
 // existingList: element which is an existing element
-// target: element to put elements into
+// destination: element to put elements into
 //
-// This function should return a number that is the sum
-// of the contents of ALL of the child elements within the parent argument
+// This function will duplicate the elements from existingList in existingList
+// into destination, but in reverse order!
 //
 // Note that using appendChild will completely MOVE the existing
 // elements from the original list
@@ -12,6 +12,6 @@
 //
 // You will have to change the usual starting and test conditions in your for loop
 
-export default function (existingList, target) {
+export default function () {
 
 }
