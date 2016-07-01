@@ -102,9 +102,9 @@
 
       // Wait for searchEtsy to finish it's promise
       //   since 'fakeData' is async
-      return searchEtsy('starcraft', fakeData);
+      return searchTwitch(gameListElement, 'starcraft', fakeData);
     }).then(() => {
-      const cageOne = products.querySelector('.game-item');
+      const cageOne = gameListElement.querySelector('.game-item');
 
       testUiForItem(cageOne, itemOne, assert,
         'Starcraft result');
