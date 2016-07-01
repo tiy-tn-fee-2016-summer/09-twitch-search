@@ -73,49 +73,7 @@
       `${msgPrefix}: The game item pic has an alt from the game item's name`);
   }
 
-  test('free passing test', (assert) => {
-    assert.ok(true);
-  });
-
-  const createGameItem = require('twitch/create-game-element');
-
-  test('it can create a gameItem element', (assert) => {
-    // Check the game item element
-    const gameItem = createGameItem(itemOne);
-
-    testUiForItem(gameItem, itemOne, assert,
-      'Result of createGameItem with itemOne');
-
-    const gameItemTwo = createGameItem(itemTwo);
-
-    testUiForItem(gameItemTwo, itemTwo, assert,
-      'Result of createGameItem with itemTwo');
-  });
-
-  const showGamesInList = require('twitch/add-games-to-list');
-
-  test('it can add games to the list of games', (assert) => {
-    const parentEl = document.createElement('div');
-
-    showGamesInList(parentEl, [itemOne, itemTwo]);
-
-    const gameItemOne = parentEl.querySelector('.game-item');
-    const gameItemTwo = parentEl.querySelector('.game-item:last-of-type');
-
-    testUiForItem(gameItemOne, itemOne, assert,
-      'Result of showAllResults for itemOne');
-
-    testUiForItem(gameItemTwo, itemTwo, assert,
-      'Result of showAllResults for itemOne');
-
-    showGamesInList(parentEl, [itemTwo]);
-
-    const gameItemReset = products.querySelector('.game-item');
-
-    testUiForItem(gameItemReset, itemTwo, assert,
-      'showGamesInList should empty the element before adding items');
-  });
-
+  // Fakes twitch data so tests run fast!
   function fakeData(searchTerm) {
     return new Promise((resolve) => {
       if (searchTerm === 'starcraft') {
