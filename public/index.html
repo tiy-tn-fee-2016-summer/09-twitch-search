@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>08-voting-app</title>
+  <link rel="stylesheet" href="/app.css">
+</head>
+
+<body>
+  <div class="tw-app">
+    <div class="tw-app__left"></div>
+    <div class="tw-app__center">
+      <div class="games-list"></div>
+    </div>
+    <div class="tw-app__right"></div>
+  </div>
+
+  <script src="/vendor.js" charset="utf-8"></script>
+  <script src="/app.js" charset="utf-8"></script>
+
+  <script type="text/javascript">
+    const twitch = require('twitch/index');
+
+    const gamesList = document.querySelector('.games-list');
+    twitch(gamesList, 'star');
+  </script>
+</body>
+
+</html>
